@@ -1,4 +1,4 @@
-# HtmlToPdf
+# HtmlToPdf [![codecov](https://codecov.io/gh/michaelst/html-to-pdf/branch/master/graph/badge.svg)](https://codecov.io/gh/michaelst/html-to-pdf)
 
 HTML to PDF gRPC microservice written in elixir with wkhtmltopdf.
 

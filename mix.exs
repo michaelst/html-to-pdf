@@ -7,7 +7,9 @@ defmodule HtmlToPdf.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [coveralls: :test, "coveralls.json": :test]
     ]
   end
 
@@ -24,6 +26,7 @@ defmodule HtmlToPdf.MixProject do
     [
       # 2.9.0 fixes some important bugs, so it's better to use ~> 2.9.0
       {:cowlib, "~> 2.9.0", override: true},
+      {:excoveralls, "~> 0.10", only: :test},
       {:grpc, github: "elixir-grpc/grpc"},
       {:pdf_generator, ">= 0.6.2"}
     ]
