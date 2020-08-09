@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package html_to_pdf;
+
+service Converter {
+  rpc Convert (HTMLRequest) returns (PDFReply) {}
+}
+
+message HTMLRequest {
+  string html = 1;
+  enum PageSize {
+    LETTER = 0;
+    A0 = 1;
+    A1 = 2;
+    A2 = 3;
+    A3 = 4;
+    A4 = 5;
+    A5 = 6;
+    A6 = 7;
+    A7 = 8;
+    A8 = 9;
+    A9 = 10;
+    B0 = 11;
+    B1 = 12;
+    B2 = 13;
+    B3 = 14;
+    B4 = 15;
+    B5 = 16;
+    B6 = 17;
+    B7 = 18;
+    B8 = 19;
+    B9 = 20;
+    B10 = 21;
+    C5E = 22;
+    COMM10E = 23;
+    DLE = 24;
+    EXECUTIVE = 25;
+    FOLIO = 26;
+    LEGAL = 27;
+    LEGDER = 28;
+    TABLOID = 29;
+  }
+  PageSize page_size = 2;
+}
+
+message PDFReply {
+  string bytes = 1;
+}
