@@ -25,7 +25,7 @@ defmodule HtmlToPdf.MixProject do
   defp deps do
     [
       # 2.9.0 fixes some important bugs, so it's better to use ~> 2.9.0
-      {:cowlib, "~> 2.9.0", override: true},
+      {:cowlib, "~> 2.11.0", override: true},
       {:excoveralls, "~> 0.10", only: :test},
       {:grpc, github: "elixir-grpc/grpc"},
       {:pdf_generator, ">= 0.6.2"}
